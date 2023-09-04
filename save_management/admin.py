@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import ExtendedUser
+from .models import ExtendedUser, Bill, Transaction, Category
 
 
 class CustomUserAdmin(UserAdmin):
@@ -16,3 +16,6 @@ class CustomUserAdmin(UserAdmin):
 
 
 admin.site.register(ExtendedUser, CustomUserAdmin)
+admin.site.register(Bill)
+admin.site.register(Transaction)
+admin.site.register(Category)
